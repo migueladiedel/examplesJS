@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Mi primer codigo con Java_Script</title>
+	<!-- JavaScript externo -->
+	<script type="text/javascript" src="JSexterno.js"></script>
+	<!-- JavaScript interno -->
+	<script type="text/javascript">
+
+	var opcion="";
+	var num1=0;
+	var num2=0:
+	
+		
+		function suma(num1, num2){
+			alert("La suma es: " + (num1+num2));
+		}
+
+		function resta(num1, num2){
+			alert("La resta es: " + (num1-num2));
+		}
+
+		function multiplicar(num1, num2){
+			alert("La multipicacion es: " + (num1*num2));
+		}
+
+		function dividir(num1, num2){
+			alert("La division es: " + (num1/num2));
+		}
+
+	</script>
+</head>
+<body>
+	<script>
+		
+		var operacion=prompt("¿que opcion deseas realizar: sumar, restar, multiplicar o dividir?");
+		var operador1=prompt("Introduce el primer numero, por favor.");
+		var operador2=prompt("Introduce el segundo numero");
+		if(operacion=="sumar"){
+			suma(operador1,operador2);
+		}
+
+		else if(operacion=="restar"){
+			resta(operador1,operador2);
+		}
+
+		else if(operacion=="multiplicar"){
+			multiplicar(operador1,operador2);
+		}
+
+		else if(operacion=="dividir"){
+			dividir(operador1,operador2);
+		}
+
+		else{
+			alert("Lo siento. operacion no comtemplada")
+		}
+
+	</script>
+
+	
+</body>
+</html>

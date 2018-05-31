@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Insertar libreria JQuery.</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<script src="Jquery/jquery-2.2.0.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			var z=document.getElementById("cerrar");
+			z.addEventListener("click",cerrar_banner,false);
+		});
+
+		function cerrar_banner(){
+			$("#banner").remove();
+		}
+
+		$(document).ready(function(){
+			document.getElementsById("cerrar").addEventListener("click",cerrar_banner,false);
+		})
+
+	</script>
+	
+
+
+</head>
+<body>
+	
+	<div id="banner">
+		<h1>Uso de cookies</h1>
+		<p>Utilizamos cookies propias y de terceros para mejorar nuestros servicios y mostrarle publicidad relacionada con sus preferencias mediante el análisis de sus hábitos de navegación. Si continua navegando, consideraremos que acepta su uso. Puede obtener más informacion, o bien conocer como cambiar la configuración, en nuestra </p>
+		<p class="cookies">Politica de cookies</p>
+		<p id="cerrar">Cerrar</p>
+	</div>
+
+	
+</body>
+</html>

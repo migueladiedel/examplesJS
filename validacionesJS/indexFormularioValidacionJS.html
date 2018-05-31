@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>2.10 validacion mediante JavaScript</title>
+<link rel="stylesheet" type="text/css" href="css/estilo.css"/>
+<script src="js/script.js"></script>
+
+</head>
+<body>
+
+	<form method="get" name="formulario">
+		<p>
+			<label>Código postal(5 digitos):<input class="peque" type="text" name="cod_postal"></input><span class="requerido">*</span></label>
+			<label>Llamada de teléfono:<input type="checkbox" name="llam_tel"></input></label>
+		</p>
+		<p>
+			<label>Continente:<select name="list_continente" class="mediano">
+								<option selected="selected">-Seleccionar-</option>
+								<option value="America">America</option>
+								<option value="Asia">Asia</option>
+								<option value="Europa">Europa</option>
+							</select>
+			</label>
+			<label>País:<select name="list_pais" class="mediano">
+							<option selected="selected">-Seleccionar-</option>
+							<option value="España">España</option>
+							<option value="Francia">Francia</option>
+							<option value="Alemania">Alemania</option>
+						</select>
+			</label>
+		</p>		
+		<p>
+			<label>Comunidad Aut.:<select name="list_com_auto" class="grande">
+								<option selected="selected">-Seleccionar-</option>
+								<option value="Castilla y León">Castilla y León</option>
+								<option value="Madrid">Madrid</option>
+								<option value="Andalucía">Andalucía</option>
+							</select>
+			</label>
+		</p>	
+		<p>
+			<label>Provincia:<select name="list_prov" class="grande">
+								<option selected="selected">-Seleccionar-</option>
+								<option value="Burgos">Burgos</option>
+								<option value="Palencia">Palencia</option>
+							</select><span class="requerido">*</span>
+			</label>
+		</p>
+		<p>
+			<label>Población:<select name="list_pobla" class="grande">
+								<option selected="selected">-Seleccionar-</option>
+								<option value="Burgos">Burgos</option>
+								<option value="Aranda">Aranda</option>
+							</select><span class="requerido">*</span>
+			</label>
+		</p>
+		<p>
+			<label>Tipo de Turista:<select name="list_tip_turist" class="mediano">
+								<option selected="selected">-Seleccionar-</option>
+								<option value="Individual">Individual</option>
+								<option value="Grupo">Grupo</option>
+							</select><span class="requerido">*</span>
+			</label>
+			<label>Nº de Personas
+				<input class="peque" type="text" name="num_person"/>
+			</label>
+		</p>
+		<p>
+			<label>Tipo de Alojamiento:
+				<select name="list_tip_aloj" class="mediano">
+					<option selected="selected">-Seleccionar-</option>
+					<option value="opc1">opc1</option>
+					<option value="opc2">opc2</option>
+				</select><span class="requerido">*</span>
+			</label>
+			<label>Pernoctación
+				<input type="number" class="peque" name="pernota"/>
+			</label>
+			<label>Sellado<input type="checkbox" name="sellado"/></label>
+		</p>
+		<p class="boton"><input type="submit" value="Insertar Visita" /></p>		
+	</form>
+	
+	
+
+</body>
+</html>

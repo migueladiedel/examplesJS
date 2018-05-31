@@ -1,0 +1,59 @@
+fieldset {
+	display: inline;
+}
+body {
+	background: #8d7132;
+	width: 100%;
+	color: #848484;
+}
+header {
+	text-align: center;
+	font-weight: bold;
+	font-size: 2.5em;
+	color: #822e2c;
+	height: 80px;
+}
+section {
+	width: 80%;
+	margin: 10px auto;
+}
+
+article {
+	margin: 5px 0px;
+	background: #d2c287;
+	padding: 2px;
+	line-height: 300%;
+	text-align: center;
+}
+#sentencia {
+	width: 90%;
+}
+td {
+	text-align: left;
+}
+.lineas {
+	line-height: 100%;
+	padding-left: 10px;
+}
+#presenta {
+	border-collapse: collapse;
+	border: 1px solid black;
+	width: 95%;
+}
+#presenta th {
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+fieldset {
+	text-align: middle;
+}
+
+#presenta td {
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+
+.dcha {
+	text-align: right;
+}
+

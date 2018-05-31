@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Insertar libreria JQuery.</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<script src="Jquery/jquery-2.2.0.js"></script>
+
+<style>
+	table{
+	text-align:center;
+	width:50%;
+	border:none;
+	margin:auto;
+}
+
+img{
+	padding:0 5px;
+}
+h1{
+	text-align:center;
+}
+</style>
+
+<script>
+	$(document).ready(function(){
+		document.getElementById("img1").addEventListener("mouseover",cambiar,false);
+		document.getElementById("img1").addEventListener("mouseout",origen,false);
+	});
+
+	function cambiar(){
+		$("img").attr("src","imgs/3.jpg");
+	}
+
+	function origen(){
+		$("img").attr("src","imgs/1.jpg");
+	}
+</script>
+
+</head>
+<body>
+	
+	<h1>Galería de imágenes</h1>
+<table width="100%" border="0">
+  <tr>
+    <td><img src="imgs/imgs2/1.jpg" id="img1" ></td>
+    <td><img src="imgs/imgs2/2.jpg" id="img2" ></td>
+    <td><img src="imgs/imgs2/3.jpg" id="img3" ></td>
+    <td><img src="imgs/imgs2/4.jpg" id="img4" ></td>
+  </tr>
+</table>
+
+</body>
+</html>

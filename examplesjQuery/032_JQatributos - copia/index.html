@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Insertar libreria JQuery.</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<script src="Jquery/jquery-2.2.0.js"></script>
+
+<style>
+	table{
+	text-align:center;
+	width:50%;
+	border:none;
+	margin:auto;
+}
+
+img{
+	padding:0 5px;
+}
+h1{
+	text-align:center;
+}
+</style>
+
+<script>
+	$(document).ready(function(){
+
+		var sel_imagen=document.querySelectorAll(".img");
+			for(i=0;i<sel_imagen.length;i++){
+				document.getElementsByClassName("img")[i].addEventListener("mouseover",)
+			}
+
+		document.getElementById("img1").addEventListener("mouseover",cambiar_img1,false);
+		document.getElementById("img1").addEventListener("mouseout",origen_img1,false);
+
+
+	});
+
+	function cambiar_img1(){
+		$("#img1").attr("src","imgs/1.jpg");
+	}
+
+	function origen_img1(){
+		$("#img1").attr("src","imgs/imgs2/1.jpg");
+	}
+</script>
+
+</head>
+<body>
+	
+	<h1>Galería de imágenes</h1>
+<table width="100%" border="0">
+  <tr>
+    <td><img src="imgs/imgs2/1.jpg" id="img1" class="img"></td>
+    <td><img src="imgs/imgs2/2.jpg" id="img2" class="img"></td>
+    <td><img src="imgs/imgs2/3.jpg" id="img3" class="img"></td>
+    <td><img src="imgs/imgs2/4.jpg" id="img4" class="img"></td>
+  </tr>
+</table>
+
+</body>
+</html>

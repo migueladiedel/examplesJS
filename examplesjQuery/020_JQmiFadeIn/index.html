@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Insertar libreria JQuery.</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<script src="Jquery/jquery-2.2.0.js"></script>
+
+	<script>
+		/*  La manera larga de llamar a una Funcion de JQuery, lo aplicamos a todo el body.
+		$(document).ready(function(){
+			$("body").hide().fadeIn(5000);
+		}); */
+
+		// La manera corta de JQuery, esta vez lo aplicamos solamente a la imagen.
+		$(function(){
+			$("img").hide().fadeIn(5000);
+		})
+
+	</script>	
+
+
+</head>
+<body>
+	
+	<h1>Hola alumno</h1>
+
+
+	<p>bienvenidos al curso de JavaScript de <span>Pildoras Infórmaticas</span></p>
+	<img src="imgs/Desierto.jpg" width="50%">
+
+</body>
+</html>

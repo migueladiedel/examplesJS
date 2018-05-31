@@ -1,0 +1,20 @@
+#anuncio{
+	background-color:#000;
+	color:#FFF;
+	font-size:24px;
+}
+
+.contenedor{
+	background-color:#0F0;
+}
+
+#banner{
+	background-color: #F00;
+	width: 450px;
+	height:300px;
+	position: absolute;
+	left:400px;
+	top:50px;
+	font-size: 36px;
+	text-align: center;
+}

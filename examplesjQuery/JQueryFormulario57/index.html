@@ -1,0 +1,217 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Formularios I</title>
+<style>
+
+body{
+	background-color:#FFC;
+}
+
+#principal{
+	
+	padding:10px 10px 10px 50px;
+	background-color:#F93;	
+	box-shadow: 10px 10px 5px 0px #999999;
+	border-radius: 10px;
+}
+
+td{
+	padding-bottom:25px;
+}
+h1{
+	text-align:center;
+}
+
+#las_aficiones {
+  width: 200px;
+ float: left;
+ border: 1px solid black;
+}
+
+
+</style>
+<script src="Jquery/jquery-2.2.0.js"></script>
+
+<script>
+
+	/* $(document).ready(function(e) {
+    $("#comprobar").click(comprobar_datos);		
+	});    
+
+  function comprobar_datos(){
+   /* Para comprobar el nombre y visualizar en un alert   
+   alert($("#nombre").val()); */
+
+  /*Para sacar por alert los campos texto "nombre,apellidos y edad" 
+   $(":text").each(function(){
+      alert($(this).val());
+   }); */
+
+  /* Para sacar con un alert que seleccionas "masculino o femenino" 
+  alert($("input:radio[name=genero]:checked").val());  
+}        */
+
+
+
+/* Si en el campo nombre no hemos puesto nada (esta en blanco o el value por defecto pone obligatorio nombre), te abre un alert, por favor, completa el nombre, y te envia el focus al campo nombre 
+$(document).ready(function(){
+  $("#form_datos").submit(function(){
+    if($("#nombre").val()=="" || $("#nombre").val()=="Obligatorio nombre"){
+      alert("Por favor, completa el nombre");
+      $("#nombre").focus();
+      return false;
+    }
+  });
+});           */
+
+/*  $(document).ready(function(){
+  $("#nombre").focus(function(){
+      var campo_nombre=$(this);
+      if(campo_nombre.val()==campo_nombre.attr("value")){
+        alert("hola");
+        campo_nombre.val("");
+      }
+  });
+});      */
+
+
+/* Para verificar que el campo es numerico o no y te saca un alert
+$(document).ready(function(){
+$("#edad").blur(function(){
+  var edad_usuario=$(this).val();
+  if(isNaN(edad_usuario)){
+    alert("Por favor, introduce un valor numérico");
+    $(this).focus();    */
+  /* Ponemos el campor edad en blanco, al no ser numerico */
+  /*   $(this).val("");
+  }
+});
+});    */
+
+/* Sacamos un alert con las opciones que vamos selecionando en genero y aficiones
+$(document).ready(function(){
+  $(":radio").click(function(){
+    alert($(this).val());
+  });
+
+  $(":checkbox").click(function(){
+    alert($(this).val());
+  });
+
+});     */
+
+
+/* Guardamos las opciones selecionadas de genero y aficiones en un array 
+$(document).ready(function(){
+  var miArray=new Array();
+  var i=0;
+  $(":checkbox").click(function(){
+    miArray[i]=$(this).val();
+    alert("Posicion " + i + " " + miArray[i]);
+    i++;
+  });
+});     */
+
+
+
+/* Vamos a escribir en un <div> las opciones selecionados en el campo género y aficiones NO FUNCIONAAAAAAAA 
+$(document).ready(function(){
+  var miArray=new Array();
+  var i=0;
+  $(":checkbox").click(function(){
+    miArray[i]=$(this).val();
+    $("las_aficiones").append(miArray[i]);
+    i++;
+  });
+});          */
+
+</script>
+</head>
+
+<body>
+<h1>Envío de datos</h1>
+<div id="contenedor">
+<form id="form_datos">
+  <table width="20%" border="0" align="center" id="principal">
+    <tr>
+      <td>Nombre:</td>
+      <td><label for="nombre"></label>
+        <input type="text" name="nombre" id="nombre" value="Obligatorio nombre"></td>
+    </tr>
+    <tr>
+      <td>Apellido:</td>
+      <td><input type="text" name="apellido" id="apellido"></td>
+    </tr>
+    <tr>
+      <td>Edad:</td>
+      <td><input type="text" name="edad" id="edad"></td>
+    </tr>
+    <tr>
+      <td>Género:</td>
+      <td><p>
+        <label>
+          <input type="radio" name="genero" value="Masculino" id="masculino">
+          masculino</label>
+        <br>
+        <label>
+          <input type="radio" name="genero" value="Femenino" id="femenino">
+          femenino</label>
+        <br>
+      </p></td>
+    </tr>
+    <tr>
+      <td>País:</td>
+      <td><label for="pais"></label>
+        <select name="pais" id="pais">
+          <option>España</option>
+          <option>México</option>
+          <option>Colombia</option>
+          <option>Perú</option>
+          <option>Chile</option>
+          <option>Argentina</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td>Aficiones:</td>
+      <td><table width="200">
+        <tr>
+          <td><label>
+            <input type="checkbox" name="deporte" value="Deporte" id="deporte">
+            deporte</label></td>
+          <td><label>
+            <input type="checkbox" name="informatica" value="Informática" id="informatica">
+            informatica</label></td>
+        </tr>
+        <tr>
+          <td><label>
+            <input type="checkbox" name="lectura" value="Lectura" id="lectura">
+            lectura</label></td>
+          <td><label>
+            <input type="checkbox" name="cine" value="Cine" id="cine">
+            cine</label></td>
+        </tr>
+        <tr>
+          <td><label>
+            <input type="checkbox" name="bares" value="Bares" id="bares">
+            bares</label></td>
+          <td><label>
+            <input type="checkbox" name="naturaleza" value="Naturaleza" id="naturaleza">
+            Naturaleza</label></td>
+        </tr>
+       
+      </table></td>
+    </tr>
+    <tr>
+    <td colspan="2" align="center"><input type="submit" value="Comprobar" id="comprobar"></td>
+   
+    </tr>
+  </table>
+  </form>
+</div>
+
+<div id="las_aficiones"></div>
+
+</body>
+</html>

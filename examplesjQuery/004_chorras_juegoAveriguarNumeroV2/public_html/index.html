@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Adivinar número aleatorio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <table>
+            <td><label for="mensaje"></label>
+                <input type="text" name="mensaje" id="c_mensaje">
+            </td>
+            <td><label for="intentos"></label>
+                <input type="text" name="intentos" id="c_intentos">
+            </td>
+        </table>
+        <script>
+            var aleatorio=Math.round(Math.random()*100);
+            var minum=0;
+            var intentos=0;
+            var mensaje_pantalla=document.getElementById("c_mensaje");
+            var intentos_consumidos=document.getElementById("c_intentos");
+            
+            do {
+                minum=prompt("Introduce un número entre 0 y 100");
+                if (aleatorio>minum){
+                    mensaje_pantalla.value="Más alto";
+                }
+                if (aleatorio<minum){
+                    mensaje_pantalla.value="Más bajo";
+                    mensaje_pantalla.style.background="red";
+                    mensaje_pantalla.style.textalign="center" ;
+                }
+                intentos++;
+                intentos_consumidos.value=intentos;
+            }
+            while (aleatorio!=minum);
+            
+            mensaje_pantalla.value="ACERTASTE";
+            mensaje_pantalla.style.background="green";
+           
+        </script>    
+    </body>
+</html>

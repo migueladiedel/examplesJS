@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Insertar libreria JQuery.</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<script src="Jquery/jquery-2.2.0.js"></script>
+
+	<style>
+		#contenedor { border: solid 1px black;}
+		#errores { border: solid 1px red;}
+	</style>
+	
+	
+	
+</head>
+<body>
+	
+	<div id="contenedor">
+		<div id="errores" class="microcontenedor">Contenedor1</div>
+			<h2>Errores</h2>
+	</div>
+
+	<script>
+		$(document).ready(function(){
+
+			// Me muestra errores.
+			// alert($("#errores h2").html());
+
+			// Metemos el mensaje "Hay errores en el formulario", en el div "errores", eliminando el contenido que habia, es decir, borramos el texto "Contendor1". En formato HTML.
+			//$("#errores").html(" Hay errores en el formulario</p>");
+
+			//Añadimos el texto "Hay errores en el formulario", delante del texto "Contenedor1", dentro del mismo contenedor				
+			//$("#errores").prepend("<p>Hay errores en el formulario, prepend</p>");
+
+			//Añadimos el texto "Hay errores en el formulario", detras del texto "Contenedor1", dentro del mismo contenedor				
+			//$("#errores").append("<p>Hay errores en el formulario, append</p>");
+
+			// Metemos el mensaje "Hay errores en el formulario", en el div "errores", eliminando el contenido que habia, es decir, borramos el texto "Contendor1". En formato TXT.
+			//$("#errores").text("<p> Hay errores en el formulario</p>");
+
+			//Añadimos el texto "Hay errores en el formulario", delante del contenedor				
+			//$("#errores").before("<p>Hay errores en el formulario, before</p>");
+
+			//Añadimos el texto "Hay errores en el formulario", detras del contenedor				
+			$("#errores").after("<p>Hay errores en el formulario, after</p>");
+
+
+
+
+
+		});
+	</script>
+
+</body>
+</html>

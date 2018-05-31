@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Insertar libreria JQuery.</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<script src="Jquery/jquery-2.2.0.js"></script>
+
+	<style>
+		/* #primer_parrafo {
+			background-color: blue;
+		} */
+	</style>	
+
+	<script>
+		
+		// No se lo que hace, no funciona
+		/* $(document).ready(function(){
+			var colorFondo=$("#primer_parrafo").css("background-color");
+		});      */
+
+		
+		//Añadimos atraves de JQ un fondo azul a los ID "primer_parrafo"
+		/* $(document).ready(function(){
+			$("#primer_parrafo").css("background-color","#00F");
+		}); */
+
+		
+		//Nos permite añadir el estilo de borde azul discontinuo a los parrafos con la clase destacado.
+		$(document).ready(function(){
+			$("p.destacado").css("border","2px dotted blue");
+		});
+
+
+	</script>
+
+</head>
+<body>
+	
+	<p id="primer_parrafo">Primer párrafo</p>
+	<p class="destacado">Párrafo destacado</p>
+	<p>Tercer párrafo</p>
+
+</body>
+</html>

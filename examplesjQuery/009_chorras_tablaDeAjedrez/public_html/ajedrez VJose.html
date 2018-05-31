@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="description" content="Curso HTML5 y CSS"/>
+	<meta name="keywords" content="HTML5, CSS3, Javascript, PHP, MySQL"/>
+	<title>Ajedrez</title>
+
+	<style type="text/css">
+		table {
+			border: 1px solid black;
+			border-collapse: collapse;
+			margin: auto;
+		}
+
+	</style>
+
+	<script type="text/javascript">
+		var alto = Number(prompt("Introduzca el ancho/alto de la celda: "));
+
+		document.write("<table>");
+		for (var filas=0; filas<8; filas++) {
+			document.write('<tr>');
+			for (var columnas=0; columnas<8; columnas++) {
+				
+				if ((columnas +  filas) % 2 ==0) { // Pares
+					document.write('<td style="background-color:#000; width:' + alto + 'px;' + 'height:' + alto +'px;">');
+					document.write("</td>");
+				} else { // Impares
+					document.write('<td style="background-color:#fff; width:' + alto + 'px;' + 'height:' + alto +'px;">');
+					document.write("</td>");
+				}
+				
+			}
+			document.write("</tr>");
+		}
+		document.write("</table>");
+
+	</script>
+
+</head>
+
+<!-- -->
+
+<body>
+
+
+
+</body>
+</html>

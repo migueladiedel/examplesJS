@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Video 16</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
+            var condicion=true;
+            var i=1;
+            
+            function loseventos() {
+                var elemento1=document.getElementsByTagName("p")[0];
+                var elemento2=document.getElementsByTagName("img")[0];
+                
+                if (i<1) {
+                    elemento1.addEventListener("click", aviso1, false);
+                    elemento2.addEventListener("click", aviso2, condicion);
+                }
+                else {
+                    elemento1.addEventListener("click", aviso1, condicion);
+                    elemento2.addEventListener("click", aviso2, false);
+                }
+            }
+            
+            function aviso1() {
+                alert("Hola soy el parrafo");
+            }
+            function aviso2() {
+                alert("Hola soy la imagen");
+            }
+            
+            window.addEventListener("load", loseventos, false);
+        </script>
+    </head>
+    <body>
+        <p><img src="imagenes/1.jpg"></p>
+    </body>
+</html>

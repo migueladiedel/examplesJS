@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Video 44</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="dragdrop.css">
+        
+        <script>
+            var soltar;
+            
+            function comenzar() {
+                //Hacemos que soltar señale a la sección que tiene como id="zonadestino"
+                soltar=document.getElementById("zonadestino");
+                //para los eventos "dragenter" y "dragover" lo que vamos a decirles es que resetee 
+                //o borre los comportamientos por defectos que tienen los navegadores
+                soltar.addEventListener("dragenter", function(e){e.preventDefault();},false);
+                soltar.addEventListener("dragover", function(e){e.preventDefault();},false);
+                //vamos a llamar al procedimiento "soltado" con el evento "drop".
+                //Cuando se suelte el ratón en la zona de destino.
+                soltar.addEventListener("drop", soltado,false);
+            }
+            function soltado(e){
+                //resetear el comportamiento por defecto del navegador cuando soltamos un elemento sobre él
+                e.preventDefault();
+                //definimos una variable "archivos" que va a guardar el array con todas 
+                //las propiedades del archivo arrastrado
+                var archivos=e.dataTransfer.files;
+                //Declaramos una variable "listado" vacía que va a contener el nombre de los archivos del array
+                var listado="";
+                //Luego recorremos con un bucle for el array y lo guardamos en la variable "listado"
+                for(var f=0;f<archivos.length;f++) {
+                    //listado=archivos[f].name;
+                    //listado=(archivos[f].size/1024).toFixed(2);
+                    //listado+="Archivo: " + archivos[f].name + " Peso: " + (archivos[f].size/1024).toFixed(2) + " Tipo: " + archivos[f].type + "<br>";
+                    listado+="Archivo: " + archivos[f].name + " Peso: " + (archivos[f].size/1024).toFixed(2) + " Fecha: " + archivos[f].lastModifiedDate.toLocaleDateString() + "<br>";
+                }
+                //Finalmente visualizamos en la sección destino "soltar" los datos guardados 
+                //en "listado" que son las propiedades del archivo arrastrado
+                soltar.innerHTML=listado;
+            }
+            window.addEventListener("load",comenzar,false);
+        </script>
+    </head>
+    <body>
+        <section id="zonadestino">
+            Arrastre el elemento hasta aquí
+        </section>
+    </body>
+</html>

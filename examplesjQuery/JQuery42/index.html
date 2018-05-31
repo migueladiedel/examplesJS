@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Introducción a eventos</title>
+<style>
+h1{
+	text-align:center;
+}
+body{
+	background-color:#334873;
+	color:#FFF;
+}
+
+#principal{
+	width:60%;
+	margin:auto;
+}
+
+a{
+	color:#FFF;
+	font:bold 20px Verdana, Geneva, sans-serif;
+} 
+</style>
+<script src="Jquery/jquery-2.2.0.js"></script>
+<script>
+
+	/*  NO FUNCIONA
+	$(document).ready(function(){
+		$("html").dblclik(function(){
+			alert("Ayyyyyyy");
+		});
+	});  */
+
+	$(document).ready(function(){
+
+		// Al pasar el raton por el vinculo, mostramos el mensaje "estas pasando el ratón por encima del link"
+	$("a").mouseover(function(){
+	var mensaje="<p>Estás pasando el ratón por encima del link</p>";
+	$("#principal").append(mensaje);
+		});
+
+	// Al hacer clic en el boton, cambiamos el mensaje "un boton" por el de "Para hacer click!!"
+	$("#el_boton").click(function(){
+		$(this).val("Para hacer click!!");
+	});
+
+	});
+
+</script>
+</head>
+<body>
+
+<div id="principal">
+
+<h1>Introducción a eventos</h1>
+
+<p><a href="#">Un link</a></p>
+
+<form action="#" method="get">
+<fieldset><legend>Formulario</legend><p>
+  <input name="button" type="button" id="el_boton" value="Un boton">
+</p>
+<p><input name="textfield" type="text" id="el_campo"></p></fieldset>
+</form>
+
+</div>
+
+
+</body>
+</html>

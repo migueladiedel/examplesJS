@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Trabajadores en un array</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            var trabajadores=new Array();
+            var persona="";
+            var contador=0;
+            
+            while (persona!="salir"){
+                persona=prompt("Introduce el nombre del trabajador");
+                trabajadores[contador]=persona;
+                contador++;        
+            }
+        
+            // Eliminamos el último elemento del array
+            trabajadores.pop();
+            
+            // Visualizamos el array
+            for (contador=0; contador<trabajadores.length; contador++){
+                document.write(trabajadores[contador] + "<br>");
+            }
+        </script>
+        
+    </body>
+</html>

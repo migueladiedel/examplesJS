@@ -1,0 +1,74 @@
+@import url(https://fonts.googleapis.com/css?family=Fredoka+One);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700italic);
+
+html{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    background-image: url(images/bg.jpg); 
+}
+
+body {
+    margin:0px;
+    background-color: rgba(255,255,255,0.78);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.tabla {
+    display: inline-block;
+    margin: 50px;
+}
+
+div {
+    display:table;
+    margin:auto;
+}
+
+#titulo {
+    font-size: 50pt;
+    color:black;
+    margin: 50px auto 30px auto;
+    display:table;
+    text-shadow:2px 2px 5px #023750;
+}
+
+#numero {
+    font-family: 'Fredoka One', cursive;
+    font-size: 21pt;
+    color:white;
+    background-color: #050F84;
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    margin:auto;
+    box-shadow: 2px 2px 5px #023750;
+}
+
+#tablero {
+    border: 3px solid black;
+    margin-bottom: 30px;
+    border-radius: 6px;
+}
+.cuadrado {
+    width: 70px;
+    height: 70px;
+    background: white;
+    display: inline-block;
+}
+
+.negro {
+    background: black;
+}
+
+.fila {
+    display: flex;
+}
+
+.imagen {
+    position: absolute;
+    top: 200px;
+    left:950px;
+}

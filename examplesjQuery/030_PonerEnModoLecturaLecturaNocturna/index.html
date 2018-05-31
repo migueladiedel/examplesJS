@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<style>
+
+h1{
+	text-align:center;
+}
+
+div{
+	width:20%;
+	margin:0 70px;
+	float:left;
+	border:#F00 solid 2px;
+	padding:10px;
+}
+
+table{
+	width:100%;
+	margin-top:10px;
+}
+
+
+</style>
+
+<script src="Jquery/jquery-2.2.0.js"></script>
+<script>
+	$(document).ready(function(){
+		
+		var aBoton=document.querySelectorAll(".leer");
+		for (i=0; i<aBoton.length; i++){
+			document.getElementsByClassName("leer")[i].addEventListener("click",ModoLectura,false);
+		}
+
+	});
+
+	function ModoLectura(e){
+		var zona;
+		
+		if (e.target.id=="lectura1"){
+			zona="#noticia1";
+		}
+		else if (e.target.id=="lectura2"){
+			zona="#noticia2";
+		}
+		else if (e.target.id=="lectura3"){
+			zona="#noticia3";
+		}
+
+		$(zona).css({"background-color": "black",
+					"color": "white",
+					"font-size": "1.2em",
+					"text-align": "justify"});
+
+		}
+
+</script>
+
+</head>
+
+<body>
+
+<h1>NOTICIAS</h1>
+<div id="noticia1">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"<table><tr><td style="text-align:right"><input type="button" value="Modo lectura" class="leer" id="lectura1"></td></tr></table></div>
+
+<div id="noticia2">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"<table><tr><td style="text-align:right"><input type="button" value="Modo lectura" class="leer" id="lectura2"></td></tr></table></div>
+
+<div id="noticia3">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"<table><tr><td style="text-align:right"><input type="button" value="Modo lectura" class="leer" id="lectura3"></td></tr></table></div>
+</body>
+</html>

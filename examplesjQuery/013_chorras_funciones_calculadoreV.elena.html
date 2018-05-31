@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Calculadora</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            
+            function sumar(operador1,operador2){
+                alert("La suma es: " + (operador1+operador2));
+            }
+            
+            function restar(operador1,operador2){
+                alert("La resta es: " + (operador1-operador2));
+            }
+            
+            function multiplicar(operador1,operador2){
+               alert("La multiplicación es: " + (operador1*operador2));
+            }
+            
+            function dividir(operador1,operador2){
+                alert("La división es: " + (operador1/operador2));
+            }
+            
+            var operacion=prompt("¿Qué operación quiere realizar?","Escriba sumar/restar/multiplicar/dividir");
+            
+            if ((operacion=="sumar") || (operacion=="restar") || (operacion=="multiplicar") || (operacion=="dividir"))
+            {
+                var operador1=Number(prompt("Introduzca el primer operador", "Escriba aquí un número"));
+                var operador2=Number(prompt("Introduzca el segundo operador", "Escriba aquí un número"));
+            
+                if (operacion=="sumar"){
+                    sumar(operador1,operador2);
+                }
+
+                else if (operacion=="restar"){
+                    restar(operador1,operador2);
+                }
+
+                else if (operacion=="multiplicar"){
+                    multiplicar(operador1,operador2);
+                }
+
+                else if (operacion=="dividir"){
+                    dividir(operador1,operador2);
+                }
+            }
+                else{
+                    alert("Operación no valida");
+                }
+            
+            </script>
+    </head>
+    <body>
+       
+    </body>
+</html>

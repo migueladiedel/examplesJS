@@ -1,0 +1,75 @@
+body{
+	width: 90%;
+	margin:auto;
+	font-family: "Times New Roman", Times, serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 1.5em;
+}
+
+#formulario{
+	font-family: "Times New Roman", Times, serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 0.8em;
+	width: 60%;
+	margin:auto;
+	margin-top:10%;
+}
+
+
+
+
+input.peque{
+	 width: 5%;
+}
+
+select.mediano{
+	 width: 30%;
+}
+
+select.intermedio{
+	 width: 52%;
+}
+
+
+/*Asigno anchura con id al campo tipo alojamiento,comunidad autonoma,provincia, poblacion y pais*/
+#list_tip_aloj{
+	width: 35%;
+}
+#list_com_auto{
+	width: 75%;
+}
+#list_prov{
+	width: 83%;
+}
+#list_pobla{
+	width: 83%;
+}
+#list_pais{
+	width: 43%;
+}
+.boton{
+	text-align:center;
+}
+
+/*Asigno al contenido del span con class requerido un color*/
+.requerido {
+	color: red;
+}
+
+#menu ul li{
+	list-style-type: none;
+	display:inline;
+	padding-left:2%;
+}
+
+#menu{
+	background-color:#c0c0c0;
+	width: 100%;
+}
+
+.etiq{
+	/*Dejar separación entre la etiqueta y el campo de introduccion de datos*/
+	margin-right:1%;
+}

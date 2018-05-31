@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Video 15 y 16</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
+            
+            var imagen= new Array();
+ 
+            function manejaFlor() {
+                imagen=document.getElementsByTagName("img"); 
+                
+                for (var i=0; i<imagen.length; i++) {
+                    imagen[i].addEventListener("mouseover", crecer.bind(null,i), false);
+                    imagen[i].addEventListener("mouseout", menguar.bind(null,i), false);
+                    imagen[i].addEventListener("click", tipoflor.bind(null,i), false);
+                }
+            }
+            
+            function crecer(i) {
+                imagen[i].width=225;
+                imagen[i].heigth=225;
+            }
+            
+            function menguar(i) {
+                imagen[i].width=200;
+                imagen[i].heigth=200;
+            }
+            
+            function tipoflor(i) {
+                alert ("Flor" + i);
+            }
+            
+            /*window.onload=manejaFlor;*/
+            /*podemos también así la llamda al evento cargar página*/
+            window.addEventListener("load", manejaFlor, false);
+        </script>
+    </head>
+    <body>
+        <p><img src="imagenes/1.jpg">&nbsp;&nbsp;<img src="imagenes/2.jpg">&nbsp;&nbsp;<img src="imagenes/3.jpg">&nbsp;&nbsp;<img src="imagenes/4.jpg"></p>
+    </body>
+</html>

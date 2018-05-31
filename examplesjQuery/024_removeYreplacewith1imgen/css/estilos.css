@@ -1,0 +1,17 @@
+#banner {
+	background-color: #F00;
+	width: 450px;
+	height: 300px;
+	position: absolute;
+	left: 400px;
+	top: 50px;
+	font-size: 36px;
+	text-align: center;
+}
+
+img{
+	float: left;
+	margin: 15px;
+	width: 350px;
+	height: 200px;
+}

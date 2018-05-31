@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="es-es">
+    <head> 
+        <title> Ejercicio 1 </title>
+        <meta charset="UTF-8">
+        <style>
+            body { background-color:#ccffcc; }
+            .tamano { width: 100%;
+                      height: 250px; }
+            .azul  { background-color: #C1D5DE;}
+            .naranja {background-color: #DEDBC1; }
+            img {
+                width: 70px;
+                height: 60px;
+                margin-right: 20px;
+            }
+            #hotel{
+                font-weight: bold;
+                font-size:35px;
+            }
+            #inicio,#fin{
+                font-weight: bold;
+            }
+            
+        </style>
+        <script type="text/javascript" src="js/scriptUno.js"></script>
+    </head>
+    <body>
+        <form>
+            Hotel:<br>
+            <label id="hotel"></label><br>
+            Teléfono:
+            <label id="telefono"> </label><br>
+            Dirección: <label id="direccion"></label><br>
+            Habitación inicial: <label id="inicio"></label><br>
+            Habitación final: <label id="fin"></label>
+        </form>
+        <div class=" tamano azul">
+            <h2> Panel de operaciones </h2>
+            <form>
+                <input type="button" value="Cambiar datos" id="datos">
+                Nombre: <input type="text" id="nom">
+                Teléfono: <input type="text" id="pedirtelefono">
+                Dirección: <input type="text" id="pedirdireccion"> <br><br>
+
+                <input type="button" value="Reservar Habitación" id="reservar">
+
+                Tarifa:
+                <select id="tarifa">
+                    <option value="A" selected="selected">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                </select>
+                <br><br>
+                <input type="button" value="Liberar Habitación" id="liberar">
+                Habitación:  <input type="text" value="0" id="habi"><br><br>
+                <input type="button" value="Listado de habitaciones libres" id="listado"><br>
+            </form>
+        </div>
+
+        <div class="tamano naranja" id="resultados">
+            <h2> Panel de resultados</h2>
+            <img id="imagen">
+            <span id="texto"></span>
+        </div>
+    </body>
+</html>

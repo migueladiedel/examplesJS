@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="es-es">
+    <head>
+        <title>Ejercicio 2</title>
+
+        <meta charset="UTF-8">
+        <style>
+            body { background-color:#ccffcc; }
+            p { width: 200px;
+                margin: 5px;
+                background-color:orange;
+                text-align:center;
+            }
+            .azul {background-color:blue;}
+            .rojo {background-color:red;}
+            .verde {background-color:green;}
+            .naranja {background-color:orange;}
+            .amarillo {background-color: yellow;}
+            #cabecera { width: 100%;
+                        height:50px;
+                        background-color:orange;
+            }
+            #color td {
+                width: 35px;
+                height: 20px;
+            }
+            img { width: 100px;
+                  height: 80px;
+            }
+            .sele{
+                border: 5px solid orange;
+            }
+        </style>
+        <script type="text/javascript" src="js/scriptDos.js"></script>
+    </head>
+    <body>
+        <diV>
+            <table width="500" border="1" id="color">
+                <caption>
+                    <h3>Haz click para seleccionar un color</h3>
+                </caption>
+                <tr><td class="azul sele"></td><td class="rojo"><td class="verde"></tr>
+            </table>
+        </div>
+        <h3>Haz click en una imagen para seleccionar un producto</h3>
+        <div id="imagenes">
+            <img src="img/camisa.jpg" class="sele">
+            <img src="img/pantalon.jpg">
+            <img src="img/chaqueta.jpg">
+            <img src="img/zapatos.jpg">
+        </div>
+        <h3>Indica una talla, la cantidad y el precio por unidad</h3>
+        <div id="adi">
+            Talla:
+            <select id="tallaje">
+                <option value="L" selected="selected">L</option>
+                <option value="M">M</option>
+                <option value="XL">XL</option>
+            </select>
+            Cantidad:
+            <input type="text" value="0" id="cant">
+            Precio:
+            <input type="text" value="0" id="valor">
+        </div><br>
+        <p id="par" class="naranja">Al pasar el ratón cambia de color de fondo al sele</p><br>
+        <input type="button" value="confirmar" id="confirmar">
+        <hr><hr>
+        <div id="resultado" class="amarillo"></div>
+    
+    </body>

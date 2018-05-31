@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JQuery: validar formularios</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery/jquery-2.2.0.js"></script>
+        <script>
+            function Validar(){
+                var usuario=document.getElementById("usuario").value;
+                var nombre=document.getElementById("nombre").value;
+                var apellido=document.getElementById("apellido").value;
+
+
+                if (usuario==""){
+                    $("#usuario").after("Rellena este campo, por favor");
+                }
+                if (nombre==""){
+                    $("#nombre").after("Rellena este campo, por favor");
+                }
+                if (apellido==""){
+                    $("#apellido").after("Rellena este campo, por favor");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form action="" method="get"> 
+            <p>Usuario:  <input name="" type="text" id="usuario"></p>
+            <p>Nombre:   <input name="" type="text" id="nombre"></p>
+            <p>Apellido: <input name="" type="text" id="apellido"></p>
+            <input type="button" value="Enviar" onClick="Validar()">
+        </form>
+
+
+   </body>
+</html>

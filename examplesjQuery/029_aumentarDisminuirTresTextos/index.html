@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Insertar libreria JQuery.</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	
+
+	<style>
+
+h1{
+	text-align:center;
+}
+
+div{
+	width:20%;
+	margin:0 100px;
+	float:left;
+	border:#F00 solid 2px;
+	padding:10px;
+}
+
+table{
+	width:100%;
+	margin-top:10px;
+}
+
+
+</style>
+
+<script src="Jquery/jquery-2.2.0.js"></script>
+
+
+<script>
+
+$(document).ready(function(){
+
+
+var aAumentar=document.querySelectorAll(".aumentar");
+	for (i=0;i<aAumentar.length; i++) {
+		document.getElementsByClassName("aumentar")[i].addEventListener("click",aumentar,false);
+	}
+
+
+
+
+var dDisminuir=document.querySelectorAll(".disminuir");
+	for (i=0;i<aAumentar.length; i++) {
+		document.getElementsByClassName("disminuir")[i].addEventListener("click",disminuir,false);
+	}
+
+
+	
+
+});
+
+function aumentar(e){
+		var zona;
+		var tamañoLetra;
+
+		if(e.target.id=="aumenta1"){
+			zona="#noticia1";
+		}
+		else if(e.target.id=="aumenta2"){
+			zona="#noticia2";
+		}
+		else if(e.target.id=="aumenta3"){
+			zona="#noticia3";
+		}
+
+
+		tamañoLetra=$(zona).css("font-size");
+		tamañoLetra=parseFloat(tamañoLetra);
+		$(zona).css("font-size",tamañoLetra*1.05);
+	}
+
+
+
+function disminuir(e){
+	var zona;
+	var tamañoLetra;
+
+	if(e.target.id=="disminuye1"){
+		zona="#noticia1";
+	}
+	else if(e.target.id=="disminuye2"){
+		zona="#noticia2";
+	}
+	else if(e.target.id=="disminuye3"){
+		zona="#noticia3";
+	}
+
+	tamañoLetra=$(zona).css("font-size");
+	tamañoLetra=parseFloat(tamañoLetra);
+	$(zona).css("font-size",tamañoLetra*0.95);
+}
+
+
+
+	
+		/* document.getElementById("aumenta1").addEventListener("click",aumentar,false);
+	
+
+	function aumentar();
+		var tamDefecto=$("#noticia1").css("font-size");
+		tamDefecto=parseInt(tamDefecto);
+		$("#noticia1").css("font-size",tamDefecto*2); */
+
+</script>
+	
+
+
+</head>
+<body>
+	
+	<h1>NOTICIAS</h1>
+<div id="noticia1">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"<table><tr><td style="text-align:left"><input type="button" value="Aumentar" id="aumenta1" class="aumentar"></td><td style="text-align:right"><input type="button" value="Disminuir" id="disminuye1" class="disminuir"></td></tr></table></div>
+
+<div id="noticia2">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"<table><tr><td style="text-align:left"><input type="button" value="Aumentar" id="aumenta2" class="aumentar"></td><td style="text-align:right"><input type="button" value="Disminuir" id="disminuye2" class="disminuir"></td></tr></table></div>
+
+<div id="noticia3">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"<table><tr><td style="text-align:left"><input type="button" value="Aumentar" id="aumenta3" class="aumentar"></td><td style="text-align:right"><input type="button" value="Disminuir" id="disminuye3" class="disminuir"></td></tr></table></div>
+
+</body>
+</html>
